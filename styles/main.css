@@ -1,0 +1,435 @@
+/*
+Fonts
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
+Variables
+*/
+
+:root {
+  --clr-primary: #9b1111;
+  --clr-secondary: #56423e;
+  --clr-accent: #c99897;
+  --clr-font: #eef4ed;
+  --clr-background: #141414;
+  --ff-text: "Montserrat", sans-serif;
+  --ff-title: "JetBrains Mono", serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+
+/*
+Global Styles
+*/
+
+body {
+  font-family: var(--ff-text);
+  background: var(--clr-background);
+  color: var(--clr-font);
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-font);
+  font-family: var(--ff-text);
+}
+
+button {
+  border: none;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: var(--ff-text);
+}
+
+.btn-primary {
+  background-color: var(--clr-primary);
+  color: var(--clr-font);
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-background);
+}
+
+.btn-secondary {
+  background-color: var(--clr-secondary);
+  color: var(--clr-font);
+}
+
+.btn-secondary:hover {
+  background-color: var(--clr-font);
+  color: var(--clr-secondary);
+}
+
+.header-btn {
+  background-color: var(--clr-primary);
+  color: var(--clr-font);
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-background);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-title);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: medium;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-family: var(--ff-text);
+  color: var(--clr-font);
+}
+
+section {
+  padding: 5rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.75rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.none {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.primary {
+  background-color: var(--clr-primary);
+  color: var(--clr-font);
+}
+
+.primary img {
+  filter: invert(90%) sepia(2%) saturate(515%) hue-rotate(66deg)
+    brightness(109%) contrast(93%);
+}
+
+.secondary {
+  background-color: var(--clr-secondary);
+  color: var(--clr-font);
+}
+
+.secondary img {
+  filter: invert(90%) sepia(2%) saturate(515%) hue-rotate(66deg)
+    brightness(109%) contrast(93%);
+}
+
+.accent {
+  background-color: var(--clr-accent);
+  color: var(--clr-background);
+}
+
+.accent p {
+  color: var(--clr-background);
+}
+
+.accent img {
+  filter: invert(0%) sepia(95%) saturate(7298%) hue-rotate(47deg)
+    brightness(105%) contrast(84%);
+}
+
+.border {
+  border-radius: 20px;
+}
+
+.border-top {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.border-bottom {
+  border-radius: 0px 0px 20px 20px;
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+.card-container {
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.card {
+  flex-direction: column;
+  padding: 16px 24px;
+  text-align: left;
+}
+
+/*
+Qui suis-je ?
+*/
+
+.qsj {
+  width: 90%;
+  margin: auto;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.qsj-right {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.qsj-left {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.qsj-btn {
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .qsj {
+    flex-direction: row;
+  }
+  .qsj-left {
+    padding-top: 3rem;
+  }
+  .qsj-right {
+    justify-content: space-evenly;
+  }
+}
+
+/*
+Mon Parcours
+*/
+.parcours {
+  width: 90%;
+  margin: auto;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.parcours .card {
+  width: 80%;
+}
+
+.card-bottom {
+  gap: 1rem;
+}
+
+.parcours .card-title {
+  justify-content: space-between;
+}
+
+.card-title img {
+  height: 36px;
+}
+
+.card-title h3 {
+  padding-top: 0.3rem;
+}
+
+.card-bottom img {
+  height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .parcours {
+    gap: 5rem;
+  }
+  .card-container {
+    gap: 4rem;
+  }
+  .card {
+    padding: 24px 36px;
+    gap: 1rem;
+  }
+}
+
+/*
+Mes Compétences
+*/
+
+.competence {
+  width: 90%;
+  margin: auto;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.competence .card {
+  gap: 1.5rem;
+  width: 80%;
+  max-height: 25rem;
+}
+
+.competence .card-title {
+  gap: 1rem;
+}
+
+.competence .card-title h3 {
+  padding-top: 0.2rem;
+}
+
+.card-list {
+  flex-direction: column;
+}
+
+.list-row {
+  gap: 0.5rem;
+}
+
+.card-list img {
+  height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .competence {
+    gap: 5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .competence .card-container {
+    flex-direction: row;
+  }
+  .competence .card {
+    width: 30%;
+  }
+}
+
+/*
+Mes Réalisations
+*/
+
+.realisation {
+  width: 90%;
+  margin: auto;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-portfolio {
+  flex-direction: column;
+  border: solid 1px var(--clr-font);
+}
+
+.card-tag {
+  gap: 0.5rem;
+}
+
+.card-tag p {
+  padding: 5px 10px;
+}
+
+.card-see-more img {
+  height: 16px;
+  padding-top: 0.35rem;
+}
+
+@media screen and (min-width: 768px) {
+  .realisation {
+    gap: 5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .realisation .card-container {
+    flex-direction: row;
+  }
+}
+
+/*
+Contactez moi
+*/
+
+.contact {
+  width: 90%;
+  margin: auto;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact .card-container {
+  width: 100%;
+}
+
+.card-contact {
+  flex-direction: column;
+  padding: 24px 24px;
+  text-align: center;
+  gap: 2rem;
+  min-width: 15rem;
+}
+
+.card-contact img {
+  height: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    gap: 5rem;
+  }
+  .contact .card-container {
+    flex-direction: row;
+  }
+}

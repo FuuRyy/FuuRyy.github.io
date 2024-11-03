@@ -1,0 +1,30 @@
+footer {
+  background-color: #9b1111;
+  color: #eef4ed;
+  margin-top: 1rem;
+}
+
+.footer-content {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.footer-icons {
+  justify-content: space-evenly;
+}
+
+.footer-icons img {
+  height: 64px;
+  filter: invert(90%) sepia(2%) saturate(515%) hue-rotate(66deg)
+    brightness(109%) contrast(93%);
+}
+
+@media screen and (min-width: 768px) {
+  .footer-icons {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
